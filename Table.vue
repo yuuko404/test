@@ -15,37 +15,37 @@
                     <td class='blue'>1</td>
                     <td colspan="3">事業者基本情報</td>
                     <td colspan="2">事業者名</td>
-                    <td　colspan="6">サンプル会社</td>
+                    <td colspan="6">サンプル会社</td>
                 </tr>
                 <tr>
                     <td class='blue'>２</td>
                     <td colspan="3"></td>
                     <td colspan="2">所在地</td>
-                    <td　colspan="6">東京都江東区豊洲</td>
+                    <td colspan="6">東京都江東区豊洲</td>
                 </tr>
                 <tr>
                     <td class='blue'>3</td>
                     <td colspan="3"></td>
                     <td colspan="2">電話番号</td>
-                    <td　colspan="6">0000-00-0000</td>
+                    <td colspan="6">0000-00-0000</td>
                 </tr>
                 <tr>
                     <td class='blue'></td>
                     <td colspan="3"></td>
                     <td colspan="2"></td>
-                    <td　colspan="6"></td>
+                    <td colspan="6"></td>
                 </tr>
                 <tr>
                     <td class='blue'></td>
                     <td colspan="3"></td>
                     <td colspan="2"></td>
-                    <td　colspan="6"></td>
+                    <td colspan="6"></td>
                 </tr>
                 <tr>
                     <td class='blue'></td>
                     <td colspan="3"></td>
                     <td colspan="2"></td>
-                    <td　colspan="6"></td>
+                    <td colspan="6"></td>
                 </tr>
                 </tbody>
             </table>
@@ -68,36 +68,36 @@
                     <td class='blue'>1</td>
                     <td colspan="4">JAPANプランド</td>
                     <td colspan="2">jGrants</td>
-                    <td　colspan="4">2021/01/11</td>
-                    <td　colspan="2"><button><router-link to='/test2'>詳細</router-link></button></td>
+                    <td colspan="4">2021/01/11</td>
+                    <td colspan="2"><button><router-link to='/test2'>詳細</router-link></button></td>
                 </tr>
                 <tr>
                     <td class='blue'>2</td>
                     <td colspan="4">〇〇制度</td>
                     <td colspan="2">〇〇システム</td>
-                    <td　colspan="4">2021/01/23</td>
-                    <td　colspan="2"><button><router-link to='/test2'>詳細</router-link></button></td>
+                    <td colspan="4">2021/01/23</td>
+                    <td colspan="2"><button><router-link to='/test2'>詳細</router-link></button></td>
                 </tr>
                 <tr>
                     <td class='blue'>3</td>
                     <td colspan="4">〇〇制度</td>
                     <td colspan="2">〇〇システム</td>
-                    <td　colspan="4">2021/01/10</td>
-                    <td　colspan="2"><button><router-link to='/test2'>詳細</router-link></button></td>
+                    <td colspan="4">2021/01/10</td>
+                    <td colspan="2"><button><router-link to='/test2'>詳細</router-link></button></td>
                 </tr>
                 <tr>
                     <td class='blue'></td>
                     <td colspan="4"></td>
                     <td colspan="2"></td>
-                    <td　colspan="4"></td>
-                    <td　colspan="2"></td>
+                    <td colspan="4"></td>
+                    <td colspan="2"></td>
                 </tr>
                 <tr>
                     <td class='blue'></td>
                     <td colspan="4"></td>
                     <td colspan="2"></td>
-                    <td　colspan="4"></td>
-                    <td　colspan="2"></td>
+                    <td colspan="4"></td>
+                    <td colspan="2"></td>
                 </tr>
                 </tbody>
             </table>
@@ -112,10 +112,15 @@ export default {
 </script>
 
 <style scoped>
+.table {
+  overflow-y: scroll;
+  overflow-x: hidden;
+  height: 100%;
+}
 .shuju {
-    padding-top: 5%;
-    width: 90%;
-    vertical-align: middle;
+  padding-top: 5%;
+  width: 90%;
+  vertical-align: middle;
 }
 table {
   border-spacing: 0px;
@@ -135,27 +140,27 @@ table thead {
 }
 
 table tbody {
-    display: block;
-    width: calc(100%+8px);
-    height: 200px;
-    overflow-y: auto;
-    background-color:rgb(207, 221, 241);
+  display: block;
+  width: calc(100%+8px);
+  height: 200px;
+  overflow-y: auto;
+  background-color: rgb(207, 221, 241);
 }
 
 table thead tr,
 table tbody tr {
-    box-sizing: border-box;
-    table-layout: fixed;
-    display: table;
-    width: 100%;
+  box-sizing: border-box;
+  table-layout: fixed;
+  display: table;
+  width: 100%;
 }
 
-.blue{
-    background-color: rgb(75, 132, 212);
+.blue {
+  background-color: rgb(75, 132, 212);
 }
 
-a:link{
-    color: white;
-    text-decoration: none;
+a:link {
+  color: white;
+  text-decoration: none;
 }
 </style>
