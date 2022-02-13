@@ -1,0 +1,98 @@
+<template>
+  <v-container>
+        <v-app id="inspire">
+    <v-simple-table>
+        <tr>
+        <th>
+            sss
+        </th>
+                <th>
+            sss
+        </th>
+                <th>
+            sss
+        </th>
+        </tr>
+    </v-simple-table>
+      <v-expansion-panels accordion v-model="panel"
+        multiple flat>
+        <v-expansion-panel v-for="(value,key,index) in test" :key='index'>
+          <v-expansion-panel-header class="blue" hide-actions>
+              <v-simple-table class="blue">
+                  <tr>
+                    <td>
+                        
+                    </td>
+                    <td></td>
+                    <th v-if="key=='category1'">
+                        <v-icon>mdi-menu-down</v-icon>
+                        jihua
+                    </th>
+                    <th v-else class="blue">   
+                        <v-icon>mdi-menu-down</v-icon>
+                        {{key}}
+                    </th>
+                </tr>
+              </v-simple-table>
+
+          </v-expansion-panel-header>
+          <v-expansion-panel-content>
+              <v-simple-table>
+                  <tbody v-for="(v,k,i) in value" :key="i">
+                      <tr> 
+                        <td>
+                          </td>
+                          <td>
+                          </td>
+                          <td>
+                              {{k}}
+                          </td>
+                          <td v-if="v=='hidden'" class = grey>
+                              yincang
+                          </td> 
+                          <td v-else>
+                              {{v}}
+                          </td>
+                      </tr>
+                  </tbody>
+              </v-simple-table>
+          </v-expansion-panel-content>
+        </v-expansion-panel>
+      </v-expansion-panels>
+        </v-app>
+
+  </v-container>
+</template>
+
+<script>
+  import axios from 'axios';
+  export default {
+    name: 'HelloWorld',
+    
+    data: () => ({
+        panel:[],
+        test:[],
+        items: [],
+    }),
+
+  methods:{
+        getData:function(){
+            axios
+            .get('./test.json')
+            .then(response => (this.test = response.data))
+        },
+
+            none () {
+            this.panel = [0]
+        },
+  },
+
+    mounted(){
+        this.getData()
+        this.none()
+    }
+  }
+</script>
+
+<style scoped>
+</style>
